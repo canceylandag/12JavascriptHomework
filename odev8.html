@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <h1>Ödev 8:3 yazılı notunu hesaplayıp ortalaması 50′ den küçükse “Kaldı” değilse “Geçti” durumunu ekrana yazdıran  </h1>
+        <p id="result"></p>
+       
+    </main>
+    
+    <script>
+      var students = [ {name:"Ahmet",notes:[50,100,70]} ,{name:"Mehmet",notes:[0,50,40]} ,{name:"Ayşe",notes:[50,55,38]} ];
+
+      const averages=[];
+
+        students.forEach(x=>{
+            let i=0;
+            x.notes.forEach(y=>{
+
+                i=y+i;
+
+            });
+            averages.push(i/3);
+
+        });
+
+        for(let a=0;a<students.length;a++){
+
+            if(averages[a]>=50){
+                
+                students[a].result="geçti";
+            }else{
+                students[a].result="kaldı";
+            }
+            document.getElementById("result").innerText = students.map(x => x.name+" "+x.result).join("\n");
+        }
+
+
+
+
+
+    </script>
+</body>

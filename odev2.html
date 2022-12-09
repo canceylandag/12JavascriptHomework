@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <h1>Ödev 2:Tek Çift Sayı Bulma</h1>
+        <input type="number" id="inp">
+        <p id="result"></p>
+        <button onclick="hesapla()">Hesapla</button>
+    </main>
+    
+    <script>
+
+        function hesapla(){
+            stopNumber=document.getElementById("inp").value;
+  
+            if(stopNumber%2==0){
+                document.getElementById("result").innerText="Sayı Çift";
+            }else{
+                document.getElementById("result").innerText="Sayı Tek";
+
+            }
+
+        }
+
+    </script>
+</body>
+</html>

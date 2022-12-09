@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <h1>Ödev 4:Butona tıkladıkça dizi içindeki arkaplan renklerini kullanarak sayfanın arkaplan rengini değiştiren program </h1>
+        
+        <button onclick="hesapla()">Değiştir</button>
+    </main>
+    
+    <script>
+        let colorCount=0;
+        const colorArray=["red","blue","yellow","green","aqua"];
+        function hesapla(){
+            
+            
+  
+           document.querySelector("main").style.backgroundColor=colorArray[colorCount];
+           colorCount+=1;
+           colorCount===colorArray.length?colorCount=0:colorCount+=0;
+
+        }
+
+    </script>
+</body>
+</html>

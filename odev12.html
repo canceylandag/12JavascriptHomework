@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <h1>Ödev 12:Faktoriyel  </h1>
+        <label for="sayı">Sayı:</label>
+        <input type="number" id="sayı">
+        <br>
+        <button onclick="calculate()">Hesapla</button>
+        <br>
+        <p id="result"></p>
+       
+    </main>
+    
+    <script>
+        
+        function calculate(){
+           
+            let factoriall=parseInt(document.getElementById("sayı").value);
+            let result=factorial(factoriall);
+
+            alert(factoriall+" sayısının faktorieli "+result);
+           
+        }
+
+        function factorial(a){
+            let answer=1;
+            if(a===1||a===0){
+                return answer;
+            }
+            answer=answer*a;
+
+            return answer*factorial(a-1);
+
+
+        }
+
+    </script>
+</body>
